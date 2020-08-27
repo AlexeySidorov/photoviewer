@@ -1,5 +1,7 @@
-﻿using MvvmCross.IoC;
+﻿using MvvmCross;
+using MvvmCross.IoC;
 using MvvmCross.ViewModels;
+using photoviewer.Services;
 
 namespace photoviewer
 {
@@ -15,6 +17,8 @@ namespace photoviewer
                 .EndingWith("Service")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
+
+            Mvx.IoCProvider.RegisterType<IRestApiService, RestApiService>();
 
             RegisterCustomAppStart<CustomApp>();
         }

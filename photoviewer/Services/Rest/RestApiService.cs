@@ -2,7 +2,7 @@
 using System.Net.Http;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using photoviewer.core.Handlers;
+using photoviewer.Core.Handlers;
 using photoviewer.Services.Rest;
 using Refit;
 

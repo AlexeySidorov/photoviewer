@@ -1,9 +1,12 @@
-﻿using System;
-namespace photoviewer.domain.models
+﻿
+namespace photoviewer.Domain.models
 {
-    public string Raw public string
-    public stringfull": "https://images.unsplash.com/face-springmorning.jpg?q=75&fm=jpg",
-    public stringregular": "https://images.unsplash.com/face-springmorning.jpg?q=75&fm=jpg&w=1080&fit=max",
-     public stringsmall": "https://images.unsplash.com/face-springmorning.jpg?q=75&fm=jpg&w=400&fit=max",
-      public stringthumb": "https://images.unsplash.com/face-springmorning.jpg?q=75&fm=jpg&w=200&fit=max"
+    public class Url
+    {
+        public string Raw { get; set; }
+        public string Full { get; set; }
+        public string Regular { get; set; }
+        public string Small { get; set; }
+        public string Thumb { get; set; }
+    }
 }

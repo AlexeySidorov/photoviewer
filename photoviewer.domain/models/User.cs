@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace photoviewer.domain.models
+namespace photoviewer.Domain.models
 {
     public class User
     {
