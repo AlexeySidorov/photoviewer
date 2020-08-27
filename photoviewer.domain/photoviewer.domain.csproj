@@ -2,6 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
+    <RootNamespace>photoviewer.Domain</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+ 
+  <ItemGroup>
+    <ProjectReference Include="..\photoviewer.core\photoviewer.core.csproj" />
+  </ItemGroup>
 </Project>
+
