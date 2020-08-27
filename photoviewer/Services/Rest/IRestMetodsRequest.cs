@@ -9,7 +9,7 @@ namespace photoviewer.Services.Rest
     public interface IRestMetodsRequest
     {
         //Get photos
-        [Get("/Photos?page={page}&per_page={count}&order_by={sort}")]
+        [Get("/photos?page={page}&per_page={count}&order_by={sort}")]
         Task<IList<Photo>> GetPhotos([AliasAs("page")] int page,
             [AliasAs("count")] int count, [AliasAs("sort")] SortModel sortType);
         //Post llike
