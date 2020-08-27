@@ -2,7 +2,6 @@
 using System.Reflection;
 using MvvmCross.Binding.Bindings.Target.Construction;
 using MvvmCross.DroidX.RecyclerView;
-using MvvmCross.Logging;
 using MvvmCross.Platforms.Android.Core;
 using MvvmCross.Plugin;
 

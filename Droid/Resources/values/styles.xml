@@ -19,4 +19,31 @@
 		<item name="android:windowNoTitle">true</item>
 	</style>
 
+	<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+	 <style name="Toolbar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+	   <!--<item name="android:background">@color/colorPrimary</item>-->
+	  <item name="android:textColorPrimary">#ffffff</item>
+	</style>
+
+	<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+ 
+	<!--Dialog style-->
+	<style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+	 <item name="android:windowNoTitle">true</item>
+	</style>
+
+	<style name="ToolbarPopUp" parent="ThemeOverlay.AppCompat.Light">
+	</style>
+
+	 <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+	  <item name="colorAccent">#E33D40</item>
+	  <item name="android:textColorPrimary">#FFFFFF</item>
+	  <item name="android:background">#2d2d2d</item>
+	</style>
+
+	<style name="CircularProgress" parent="Theme.AppCompat.Light">
+	  <item name="colorAccent">@color/red</item>
+	</style>
+
 </resources>
