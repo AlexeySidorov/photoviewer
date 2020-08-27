@@ -1,4 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <resources>
   <dimen name="toolbar_size">56dp</dimen>
+  <dimen name="photo_img_min_width">340dp</dimen>
+  <dimen name="photo_img_min_height">338dp</dimen>
+  <dimen name="photo_img_margin_top_and_bottom">6dp</dimen>
+  <dimen name="photo_img_margin_left_and_right">10dp</dimen>
+  <dimen name="like_block_margin">10dp</dimen>
+  <dimen name="like_block_min_width">105dp</dimen>
+  <dimen name="like_block_min_height">36dp</dimen>
+  <dimen name="like_block_padding_top_and_bottom">10dp</dimen>
+  <dimen name="like_block_padding_left_and_right">23dp</dimen>
+  <dimen name="like_img_width">16dp</dimen>
+  <dimen name="like_img_height">14dp</dimen>
 </resources>

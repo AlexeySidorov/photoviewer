@@ -230,6 +230,8 @@
     <Compile Include="Views\SplashView.cs" />
     <Compile Include="Fragments\DashboardFragment.cs" />
     <Compile Include="Fragments\PhotoDetailsFragment.cs" />
+    <Compile Include="Adapters\PhotoAdapter.cs" />
+    <Compile Include="Holders\PhotoHolder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -273,11 +275,43 @@
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\PhotoHolder.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-mdpi\like.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\like.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\like.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\like.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\like.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\like.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\photoviewer\photoviewer.csproj">
       <Project>{640A50EE-A077-4E56-99F7-7BACF0A74084}</Project>
       <Name>photoviewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\photoviewer.domain\photoviewer.domain.csproj">
+      <Project>{BFC12B3A-6496-49EB-A45D-741DA36B0E30}</Project>
+      <Name>photoviewer.domain</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -285,6 +319,14 @@
     <Folder Include="Fragments\" />
     <Folder Include="Manager\" />
     <Folder Include="Navigations\" />
+    <Folder Include="Adapters\" />
+    <Folder Include="Holders\" />
+    <Folder Include="Resources\drawable\" />
+    <Folder Include="Resources\drawable-mdpi\" />
+    <Folder Include="Resources\drawable-hdpi\" />
+    <Folder Include="Resources\drawable-xhdpi\" />
+    <Folder Include="Resources\drawable-xxhdpi\" />
+    <Folder Include="Resources\drawable-xxxhdpi\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.AndroidX.MultiDex.2.0.1.2\build\monoandroid90\Xamarin.AndroidX.MultiDex.targets" Condition="Exists('..\packages\Xamarin.AndroidX.MultiDex.2.0.1.2\build\monoandroid90\Xamarin.AndroidX.MultiDex.targets')" />
