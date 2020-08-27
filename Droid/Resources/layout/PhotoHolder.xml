@@ -33,7 +33,7 @@
 				android:layout_alignParentRight="true"
 				android:minWidth="@dimen/like_block_min_width"
 				android:minHeight="@dimen/like_block_min_height"
-				android:layout_margin="@dimen/photo_img_margin_top_and_bottom"
+				android:layout_margin="@dimen/like_block_margin"
 				android:paddingLeft="@dimen/like_block_padding_left_and_right"
 				android:paddingRight="@dimen/like_block_padding_left_and_right"
 				android:paddingTop="@dimen/like_block_padding_top_and_bottom"

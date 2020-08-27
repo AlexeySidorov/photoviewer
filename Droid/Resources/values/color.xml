@@ -15,4 +15,6 @@
   <color name="darkGray">#121212</color>
   <color name="dark_title_color">#8f8e94</color>
   <color name="black">#000000</color>
+  <color name="description_color">#B2BBC6</color>
+  <color name="sub_title_color">#8E8E93</color>
 </resources>

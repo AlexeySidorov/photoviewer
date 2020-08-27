@@ -52,4 +52,23 @@
 		<item name="android:textColor">@color/black</item>
 	</style>
 
+	<style name="DescriptionStyle">
+		<item name="android:textSize">14sp</item>
+		<item name="android:letterSpacing">0.02</item>
+		<item name="android:textColor">@color/description_color</item>
+	</style>
+
+	<style name="MainTitleStyle">
+		<item name="android:textSize">18sp</item>
+		<item name="android:letterSpacing">-0.03</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="SubTitleStyle">
+		<item name="android:textSize">13sp</item>
+		<item name="android:letterSpacing">-0.01</item>
+		<item name="android:textColor">@color/sub_title_color</item>
+	</style>
+
 </resources>
