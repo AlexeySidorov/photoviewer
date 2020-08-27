@@ -35,7 +35,7 @@ namespace photoviewer.Droid.Fragments
             var ignore = base.OnCreateView(inflater, container, savedInstanceState);
             var view = this.BindingInflate(FragmentId, null);
 
-            _toolbar = ((INavigationActivity)ParentActivity).Toolbar;
+            _toolbar = (ParentActivity as INavigationActivity)?.Toolbar;
 
             if (_toolbar != null)
                 InitMainButtonToolBar();

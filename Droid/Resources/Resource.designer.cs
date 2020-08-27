@@ -16664,67 +16664,70 @@ namespace photoviewer.Droid
 			public const int notification_template_part_time = 2131427394;
 			
 			// aapt resource value: 0x7F0B0043
-			public const int preference = 2131427395;
+			public const int PhotoDetailsScreen = 2131427395;
 			
 			// aapt resource value: 0x7F0B0044
-			public const int preference_category = 2131427396;
+			public const int preference = 2131427396;
 			
 			// aapt resource value: 0x7F0B0045
-			public const int preference_category_material = 2131427397;
+			public const int preference_category = 2131427397;
 			
 			// aapt resource value: 0x7F0B0046
-			public const int preference_dialog_edittext = 2131427398;
+			public const int preference_category_material = 2131427398;
 			
 			// aapt resource value: 0x7F0B0047
-			public const int preference_dropdown = 2131427399;
+			public const int preference_dialog_edittext = 2131427399;
 			
 			// aapt resource value: 0x7F0B0048
-			public const int preference_dropdown_material = 2131427400;
+			public const int preference_dropdown = 2131427400;
 			
 			// aapt resource value: 0x7F0B0049
-			public const int preference_information = 2131427401;
+			public const int preference_dropdown_material = 2131427401;
 			
 			// aapt resource value: 0x7F0B004A
-			public const int preference_information_material = 2131427402;
+			public const int preference_information = 2131427402;
 			
 			// aapt resource value: 0x7F0B004B
-			public const int preference_list_fragment = 2131427403;
+			public const int preference_information_material = 2131427403;
 			
 			// aapt resource value: 0x7F0B004C
-			public const int preference_material = 2131427404;
+			public const int preference_list_fragment = 2131427404;
 			
 			// aapt resource value: 0x7F0B004D
-			public const int preference_recyclerview = 2131427405;
+			public const int preference_material = 2131427405;
 			
 			// aapt resource value: 0x7F0B004E
-			public const int preference_widget_checkbox = 2131427406;
+			public const int preference_recyclerview = 2131427406;
 			
 			// aapt resource value: 0x7F0B004F
-			public const int preference_widget_seekbar = 2131427407;
+			public const int preference_widget_checkbox = 2131427407;
 			
 			// aapt resource value: 0x7F0B0050
-			public const int preference_widget_seekbar_material = 2131427408;
+			public const int preference_widget_seekbar = 2131427408;
 			
 			// aapt resource value: 0x7F0B0051
-			public const int preference_widget_switch = 2131427409;
+			public const int preference_widget_seekbar_material = 2131427409;
 			
 			// aapt resource value: 0x7F0B0052
-			public const int preference_widget_switch_compat = 2131427410;
+			public const int preference_widget_switch = 2131427410;
 			
 			// aapt resource value: 0x7F0B0053
-			public const int select_dialog_item_material = 2131427411;
+			public const int preference_widget_switch_compat = 2131427411;
 			
 			// aapt resource value: 0x7F0B0054
-			public const int select_dialog_multichoice_material = 2131427412;
+			public const int select_dialog_item_material = 2131427412;
 			
 			// aapt resource value: 0x7F0B0055
-			public const int select_dialog_singlechoice_material = 2131427413;
+			public const int select_dialog_multichoice_material = 2131427413;
 			
 			// aapt resource value: 0x7F0B0056
-			public const int SplashScreen = 2131427414;
+			public const int select_dialog_singlechoice_material = 2131427414;
 			
 			// aapt resource value: 0x7F0B0057
-			public const int support_simple_spinner_dropdown_item = 2131427415;
+			public const int SplashScreen = 2131427415;
+			
+			// aapt resource value: 0x7F0B0058
+			public const int support_simple_spinner_dropdown_item = 2131427416;
 			
 			static Layout()
 			{

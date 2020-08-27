@@ -5,6 +5,7 @@ using Android.OS;
 using Android.Transitions;
 using Android.Views;
 using AndroidX.AppCompat.Widget;
+using AndroidX.DrawerLayout.Widget;
 using MvvmCross.Platforms.Android.Presenters.Attributes;
 using MvvmCross.Platforms.Android.Views;
 using photoviewer.Droid.Manager;
@@ -16,7 +17,7 @@ namespace photoviewer.Droid.Views
 {
     [MvxActivityPresentation]
     [Activity(Theme = "@style/AppTheme", ScreenOrientation = ScreenOrientation.Portrait, WindowSoftInputMode = SoftInput.StateAlwaysHidden)]
-    public class BaseView : MvxActivity<DashboardViewModel>
+    public class SplashView : MvxActivity<SplashViewModel>, INavigationActivity
     {
         private int _layout = Resource.Layout.BaseView;
 
@@ -71,6 +72,7 @@ namespace photoviewer.Droid.Views
         /// Toolbar base activity
         /// </summary>
         public Toolbar Toolbar { get; set; }
+        public DrawerLayout DrawerLayout { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
 
         /// <summary>
         /// Request permissions

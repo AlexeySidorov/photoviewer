@@ -198,19 +198,19 @@
       <HintPath>..\packages\Xamarin.Google.Guava.ListenableFuture.1.0.0.2\lib\monoandroid50\Xamarin.Google.Guava.ListenableFuture.dll</HintPath>
     </Reference>
     <Reference Include="System.Buffers">
-      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\netstandard2.0\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Text.Encodings.Web">
-      <HintPath>..\packages\System.Text.Encodings.Web.4.7.0\lib\netstandard2.1\System.Text.Encodings.Web.dll</HintPath>
+      <HintPath>..\packages\System.Text.Encodings.Web.4.7.1\lib\netstandard2.1\System.Text.Encodings.Web.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces">
-      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\netstandard2.1\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\netstandard2.1\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="System.Text.Json">
-      <HintPath>..\packages\System.Text.Json.4.7.1\lib\netstandard2.0\System.Text.Json.dll</HintPath>
+      <HintPath>..\packages\System.Text.Json.4.7.2\lib\netstandard2.0\System.Text.Json.dll</HintPath>
     </Reference>
     <Reference Include="Refit">
       <HintPath>..\packages\Refit.5.1.67\lib\netstandard2.1\Refit.dll</HintPath>
@@ -228,6 +228,8 @@
     <Compile Include="Navigations\IBackPressedListener.cs" />
     <Compile Include="Navigations\INavigationActivity.cs" />
     <Compile Include="Views\SplashView.cs" />
+    <Compile Include="Fragments\DashboardFragment.cs" />
+    <Compile Include="Fragments\PhotoDetailsFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -264,6 +266,10 @@
       <Generator></Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\BaseView.axml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\PhotoDetailsScreen.xml">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
