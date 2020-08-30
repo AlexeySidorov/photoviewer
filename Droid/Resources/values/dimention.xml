@@ -4,7 +4,7 @@
   <dimen name="photo_img_min_width">340dp</dimen>
   <dimen name="photo_img_min_height">338dp</dimen>
   <dimen name="photo_img_margin_top_and_bottom">6dp</dimen>
-  <dimen name="photo_img_margin_left_and_right">10dp</dimen>
+  <dimen name="photo_img_margin_left_and_right">5dp</dimen>
   <dimen name="like_block_margin">10dp</dimen>
   <dimen name="like_block_margin_left_and_right">10dp</dimen>
   <dimen name="like_block_margin_top">18dp</dimen>

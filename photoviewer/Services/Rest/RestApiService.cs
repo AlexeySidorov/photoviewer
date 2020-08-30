@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Http;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using photoviewer.core.Handlers;
@@ -20,10 +21,10 @@ namespace photoviewer.Services
                 })
             };
 
-            var httpClient = new HttpClient(new HttpClientDiagnosticsHandler())
+            var httpClient = new HttpClient()
             {
                 BaseAddress = new Uri(Settings.BaseUrl),
-                Timeout = new TimeSpan(0, 0, 10)
+                Timeout = new TimeSpan(0, 0, 10),
             };
 
             return RestService.For<IRestMetodsRequest>(httpClient, settings);

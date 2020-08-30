@@ -45,7 +45,7 @@ namespace photoviewer.core.DataBaseService
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        Task<TEntity> GetAsync(long id);
+        Task<TEntity> GetAsync(string id);
 
         /// <summary>
         /// ????????? ?????? ?? ???????

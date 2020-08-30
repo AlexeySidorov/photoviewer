@@ -36,7 +36,7 @@ namespace photoviewer.core.DataBaseService
         /// Загрузить все запись по ид
         /// </summary>
         /// <returns></returns>
-        public async Task<T> GetAsync(long id)
+        public async Task<T> GetAsync(string id)
         {
             return await Repository.GetAsync(id);
         }

@@ -20,6 +20,7 @@ namespace photoviewer.Services
 
         public SyncService(IAsyncRepository<SyncDao> repository) : base(repository)
         {
+            _repository = repository;
         }
 
         public async Task AddOrUpdateSyncData(SyncDao data)

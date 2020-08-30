@@ -7,7 +7,7 @@ namespace photoviewer.core.Data
     {
         Task<IEnumerable<T>> GetAllAsync();
         Task CreateAsync(T entity);
-        Task<T> GetAsync(long id);
+        Task<T> GetAsync(string id);
         Task DeleteAsync(T entity);
         Task UpdateAsync(T entity);
         Task DeleteAllAsync();

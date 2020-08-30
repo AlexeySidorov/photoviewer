@@ -21,7 +21,12 @@ namespace photoviewer.Syncronizer
             var data = await syncService.GetSyncData();
             if (data == null)
             {
-                await syncService.AddOrUpdateSyncData(new SyncDao(Guid.NewGuid().ToString(), DateTime.Now, 1));
+                var syncData = new SyncDao();
+                syncData.Id = Guid.NewGuid().ToString();
+                syncData.FirstSync = DateTime.Now;
+                syncData.Count = 1;
+
+                await syncService.AddOrUpdateSyncData(syncData);
 
                 return true;
             }

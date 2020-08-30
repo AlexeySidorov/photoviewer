@@ -5,6 +5,7 @@ using MvvmCross.DroidX.RecyclerView;
 using MvvmCross.Platforms.Android.Binding.BindingContext;
 using MvvmCross.Platforms.Android.Presenters.Attributes;
 using photoviewer.Droid.Adapters;
+using photoviewer.Droid.Navigations;
 using photoviewer.ViewModels;
 
 namespace photoviewer.Droid.Fragments
@@ -43,6 +44,13 @@ namespace photoviewer.Droid.Fragments
             _photos.SetLayoutManager(new LinearLayoutManager(Activity));
             _photos.HasFixedSize = true;
             _photos.SetAdapter(adapter);
+        }
+
+        public override void OnResume()
+        {
+            base.OnResume();
+
+            SetVisibleToolBar(false);
         }
     }
 }

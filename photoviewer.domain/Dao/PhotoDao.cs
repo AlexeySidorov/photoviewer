@@ -19,5 +19,7 @@ namespace photoviewer.Domain.Dao
         public bool LikedByUser { get; set; }
 
         public string Description { get; set; }
+
+        public string UserId { get; set; }
     }
 }

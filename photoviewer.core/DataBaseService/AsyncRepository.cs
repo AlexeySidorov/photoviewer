@@ -156,7 +156,7 @@ namespace photoviewer.core.DataBaseService
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public async Task<TEntity> GetAsync(long id)
+        public async Task<TEntity> GetAsync(string id)
         {
             return await Task.Factory.StartNew(() =>
             {

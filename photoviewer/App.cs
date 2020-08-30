@@ -37,9 +37,6 @@ namespace photoviewer
 
             ProjectSettings.DbName = "photoviewer.db";
 
-            //Создание Базы данных
-            await Task.Run(() => new DataBase().CreateDataBase(new List<Assembly>() { typeof(User).GetTypeInfo().Assembly }));
-
             RegisterCustomAppStart<CustomApp>();
         }
     }
