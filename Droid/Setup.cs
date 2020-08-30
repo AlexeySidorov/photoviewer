@@ -1,9 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Reflection;
+using MvvmCross;
+using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.Bindings.Target.Construction;
 using MvvmCross.DroidX.RecyclerView;
 using MvvmCross.Platforms.Android.Core;
 using MvvmCross.Plugin;
+using photoviewer.core.Services;
 
 namespace photoviewer.Droid
 {
@@ -23,6 +26,18 @@ namespace photoviewer.Droid
         public override void LoadPlugins(IMvxPluginManager pluginManager)
         {
             base.LoadPlugins(pluginManager);
+        }
+
+        protected override void InitializeFirstChance()
+        {
+            Mvx.IoCProvider.RegisterType<IMvxBindingContext, MvxBindingContext>();
+            Mvx.IoCProvider.RegisterSingleton<IDialogService> (new DialogService());
+            Mvx.IoCProvider.LazyConstructAndRegisterSingleton<IDataBaseService, DataBaseService>();
+            Mvx.IoCProvider.LazyConstructAndRegisterSingleton<IPlatformService, PlatformService>();
+            Mvx.IoCProvider.LazyConstructAndRegisterSingleton<IConnectionService, ConnectionService>();
+            Mvx.IoCProvider.LazyConstructAndRegisterSingleton<IProgressDialogService, ProgressDialogService>();
+
+            base.InitializeFirstChance();
         }
     }
 }
