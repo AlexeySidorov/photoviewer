@@ -14,6 +14,5 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\" />
-    <Folder Include="Repositories\" />
   </ItemGroup>
 </Project>

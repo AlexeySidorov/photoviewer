@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Xamarin.Build.Download.0.10.0\build\Xamarin.Build.Download.props" Condition="Exists('..\packages\Xamarin.Build.Download.0.10.0\build\Xamarin.Build.Download.props')" />
   <Import Project="..\packages\Xamarin.AndroidX.Migration.1.0.6.2\build\monoandroid90\Xamarin.AndroidX.Migration.props" Condition="Exists('..\packages\Xamarin.AndroidX.Migration.1.0.6.2\build\monoandroid90\Xamarin.AndroidX.Migration.props')" />
@@ -43,207 +43,18 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
-    <Reference Include="Xamarin.AndroidX.MultiDex">
-      <HintPath>..\packages\Xamarin.AndroidX.MultiDex.2.0.1.2\lib\monoandroid90\Xamarin.AndroidX.MultiDex.dll</HintPath>
-    </Reference>
     <Reference Include="Java.Interop" />
-    <Reference Include="Xamarin.AndroidX.Annotation">
-      <HintPath>..\packages\Xamarin.AndroidX.Annotation.1.1.0.2\lib\monoandroid90\Xamarin.AndroidX.Annotation.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.Arch.Core.Common">
-      <HintPath>..\packages\Xamarin.AndroidX.Arch.Core.Common.2.1.0.2\lib\monoandroid90\Xamarin.AndroidX.Arch.Core.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.Arch.Core.Runtime">
-      <HintPath>..\packages\Xamarin.AndroidX.Arch.Core.Runtime.2.1.0.2\lib\monoandroid90\Xamarin.AndroidX.Arch.Core.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.Collection">
-      <HintPath>..\packages\Xamarin.AndroidX.Collection.1.1.0.2\lib\monoandroid90\Xamarin.AndroidX.Collection.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.CursorAdapter">
-      <HintPath>..\packages\Xamarin.AndroidX.CursorAdapter.1.0.0.2\lib\monoandroid90\Xamarin.AndroidX.CursorAdapter.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.DocumentFile">
-      <HintPath>..\packages\Xamarin.AndroidX.DocumentFile.1.0.1.2\lib\monoandroid90\Xamarin.AndroidX.DocumentFile.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.Interpolator">
-      <HintPath>..\packages\Xamarin.AndroidX.Interpolator.1.0.0.2\lib\monoandroid90\Xamarin.AndroidX.Interpolator.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.Lifecycle.Common">
-      <HintPath>..\packages\Xamarin.AndroidX.Lifecycle.Common.2.2.0.2\lib\monoandroid90\Xamarin.AndroidX.Lifecycle.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.Lifecycle.LiveData.Core">
-      <HintPath>..\packages\Xamarin.AndroidX.Lifecycle.LiveData.Core.2.2.0.2\lib\monoandroid90\Xamarin.AndroidX.Lifecycle.LiveData.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.Lifecycle.Runtime">
-      <HintPath>..\packages\Xamarin.AndroidX.Lifecycle.Runtime.2.2.0.2\lib\monoandroid90\Xamarin.AndroidX.Lifecycle.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.Lifecycle.ViewModel">
-      <HintPath>..\packages\Xamarin.AndroidX.Lifecycle.ViewModel.2.2.0.2\lib\monoandroid90\Xamarin.AndroidX.Lifecycle.ViewModel.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.LocalBroadcastManager">
-      <HintPath>..\packages\Xamarin.AndroidX.LocalBroadcastManager.1.0.0.2\lib\monoandroid90\Xamarin.AndroidX.LocalBroadcastManager.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.Print">
-      <HintPath>..\packages\Xamarin.AndroidX.Print.1.0.0.2\lib\monoandroid90\Xamarin.AndroidX.Print.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.SavedState">
-      <HintPath>..\packages\Xamarin.AndroidX.SavedState.1.0.0.2\lib\monoandroid90\Xamarin.AndroidX.SavedState.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.Lifecycle.ViewModelSavedState">
-      <HintPath>..\packages\Xamarin.AndroidX.Lifecycle.ViewModelSavedState.2.2.0.2\lib\monoandroid90\Xamarin.AndroidX.Lifecycle.ViewModelSavedState.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.VersionedParcelable">
-      <HintPath>..\packages\Xamarin.AndroidX.VersionedParcelable.1.1.1.2\lib\monoandroid90\Xamarin.AndroidX.VersionedParcelable.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.Core">
-      <HintPath>..\packages\Xamarin.AndroidX.Core.1.2.0.2\lib\monoandroid90\Xamarin.AndroidX.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.Activity">
-      <HintPath>..\packages\Xamarin.AndroidX.Activity.1.1.0.2\lib\monoandroid90\Xamarin.AndroidX.Activity.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.AsyncLayoutInflater">
-      <HintPath>..\packages\Xamarin.AndroidX.AsyncLayoutInflater.1.0.0.2\lib\monoandroid90\Xamarin.AndroidX.AsyncLayoutInflater.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.CustomView">
-      <HintPath>..\packages\Xamarin.AndroidX.CustomView.1.0.0.2\lib\monoandroid90\Xamarin.AndroidX.CustomView.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.CoordinatorLayout">
-      <HintPath>..\packages\Xamarin.AndroidX.CoordinatorLayout.1.1.0.2\lib\monoandroid90\Xamarin.AndroidX.CoordinatorLayout.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.DrawerLayout">
-      <HintPath>..\packages\Xamarin.AndroidX.DrawerLayout.1.0.0.2\lib\monoandroid90\Xamarin.AndroidX.DrawerLayout.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.Loader">
-      <HintPath>..\packages\Xamarin.AndroidX.Loader.1.1.0.2\lib\monoandroid90\Xamarin.AndroidX.Loader.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.Legacy.Support.Core.Utils">
-      <HintPath>..\packages\Xamarin.AndroidX.Legacy.Support.Core.Utils.1.0.0.2\lib\monoandroid90\Xamarin.AndroidX.Legacy.Support.Core.Utils.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.Media">
-      <HintPath>..\packages\Xamarin.AndroidX.Media.1.1.0.2\lib\monoandroid90\Xamarin.AndroidX.Media.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.SlidingPaneLayout">
-      <HintPath>..\packages\Xamarin.AndroidX.SlidingPaneLayout.1.0.0.2\lib\monoandroid90\Xamarin.AndroidX.SlidingPaneLayout.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.SwipeRefreshLayout">
-      <HintPath>..\packages\Xamarin.AndroidX.SwipeRefreshLayout.1.0.0.2\lib\monoandroid90\Xamarin.AndroidX.SwipeRefreshLayout.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.ViewPager">
-      <HintPath>..\packages\Xamarin.AndroidX.ViewPager.1.0.0.2\lib\monoandroid90\Xamarin.AndroidX.ViewPager.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.Fragment">
-      <HintPath>..\packages\Xamarin.AndroidX.Fragment.1.2.4.2\lib\monoandroid90\Xamarin.AndroidX.Fragment.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.Legacy.Support.Core.UI">
-      <HintPath>..\packages\Xamarin.AndroidX.Legacy.Support.Core.UI.1.0.0.2\lib\monoandroid90\Xamarin.AndroidX.Legacy.Support.Core.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.Legacy.Support.V4">
-      <HintPath>..\packages\Xamarin.AndroidX.Legacy.Support.V4.1.0.0.2\lib\monoandroid90\Xamarin.AndroidX.Legacy.Support.V4.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.CardView">
-      <HintPath>..\packages\Xamarin.AndroidX.CardView.1.0.0.2\lib\monoandroid90\Xamarin.AndroidX.CardView.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.RecyclerView">
-      <HintPath>..\packages\Xamarin.AndroidX.RecyclerView.1.1.0.2\lib\monoandroid90\Xamarin.AndroidX.RecyclerView.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.VectorDrawable">
-      <HintPath>..\packages\Xamarin.AndroidX.VectorDrawable.1.1.0.2\lib\monoandroid90\Xamarin.AndroidX.VectorDrawable.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.VectorDrawable.Animated">
-      <HintPath>..\packages\Xamarin.AndroidX.VectorDrawable.Animated.1.1.0.2\lib\monoandroid90\Xamarin.AndroidX.VectorDrawable.Animated.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.AppCompat.AppCompatResources">
-      <HintPath>..\packages\Xamarin.AndroidX.AppCompat.AppCompatResources.1.1.0.2\lib\monoandroid90\Xamarin.AndroidX.AppCompat.AppCompatResources.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.AppCompat">
-      <HintPath>..\packages\Xamarin.AndroidX.AppCompat.1.1.0.2\lib\monoandroid90\Xamarin.AndroidX.AppCompat.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.Preference">
-      <HintPath>..\packages\Xamarin.AndroidX.Preference.1.1.1.2\lib\monoandroid90\Xamarin.AndroidX.Preference.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.Transition">
-      <HintPath>..\packages\Xamarin.AndroidX.Transition.1.3.1.2\lib\monoandroid90\Xamarin.AndroidX.Transition.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Google.Android.Material">
-      <HintPath>..\packages\Xamarin.Google.Android.Material.1.0.0.1\lib\monoandroid90\Xamarin.Google.Android.Material.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross">
-      <HintPath>..\packages\MvvmCross.7.0.0\lib\monoandroid10.0\MvvmCross.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.Android.Export" />
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.DroidX.RecyclerView">
-      <HintPath>..\packages\MvvmCross.DroidX.RecyclerView.7.0.0\lib\monoandroid10.0\MvvmCross.DroidX.RecyclerView.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.DroidX.SwipeRefreshLayout">
-      <HintPath>..\packages\MvvmCross.DroidX.SwipeRefreshLayout.7.0.0\lib\monoandroid10.0\MvvmCross.DroidX.SwipeRefreshLayout.dll</HintPath>
-    </Reference>
-    <Reference Include="MvvmCross.DroidX.Material">
-      <HintPath>..\packages\MvvmCross.DroidX.Material.7.0.0\lib\monoandroid10.0\MvvmCross.DroidX.Material.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.AndroidX.Browser">
-      <HintPath>..\packages\Xamarin.AndroidX.Browser.1.2.0.2\lib\monoandroid90\Xamarin.AndroidX.Browser.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Essentials">
-      <HintPath>..\packages\Xamarin.Essentials.1.5.3.2\lib\monoandroid10.0\Xamarin.Essentials.dll</HintPath>
-    </Reference>
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors" />
-    <Reference Include="Plugin.Permissions">
-      <HintPath>..\packages\Plugin.Permissions.6.0.1\lib\monoandroid10.0\Plugin.Permissions.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Google.Guava.ListenableFuture">
-      <HintPath>..\packages\Xamarin.Google.Guava.ListenableFuture.1.0.0.2\lib\monoandroid50\Xamarin.Google.Guava.ListenableFuture.dll</HintPath>
-    </Reference>
     <Reference Include="System.Buffers">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\netstandard2.0\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
-    <Reference Include="System.Text.Encodings.Web">
-      <HintPath>..\packages\System.Text.Encodings.Web.4.7.1\lib\netstandard2.1\System.Text.Encodings.Web.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Bcl.AsyncInterfaces">
-      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\netstandard2.1\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Text.Json">
-      <HintPath>..\packages\System.Text.Json.4.7.2\lib\netstandard2.0\System.Text.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Refit">
-      <HintPath>..\packages\Refit.5.1.67\lib\netstandard2.1\Refit.dll</HintPath>
-    </Reference>
-    <Reference Include="Refractored.Controls.CircleImageView">
-      <HintPath>..\packages\Refractored.Controls.CircleImageView.1.0.1\lib\MonoAndroid10\Refractored.Controls.CircleImageView.dll</HintPath>
-    </Reference>
-    <Reference Include="Plugin.Connectivity.Abstractions">
-      <HintPath>..\packages\Xam.Plugin.Connectivity.3.2.0\lib\MonoAndroid10\Plugin.Connectivity.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Plugin.Connectivity">
-      <HintPath>..\packages\Xam.Plugin.Connectivity.3.2.0\lib\MonoAndroid10\Plugin.Connectivity.dll</HintPath>
-    </Reference>
-    <Reference Include="SQLitePCLRaw.lib.e_sqlite3.android">
-      <HintPath>..\packages\SQLitePCLRaw.lib.e_sqlite3.android.2.0.3\lib\monoandroid80\SQLitePCLRaw.lib.e_sqlite3.android.dll</HintPath>
-    </Reference>
     <Reference Include="System.Memory">
       <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
-    </Reference>
-    <Reference Include="SQLitePCLRaw.core">
-      <HintPath>..\packages\SQLitePCLRaw.core.2.0.3\lib\netstandard2.0\SQLitePCLRaw.core.dll</HintPath>
-    </Reference>
-    <Reference Include="SQLitePCLRaw.provider.e_sqlite3">
-      <HintPath>..\packages\SQLitePCLRaw.provider.e_sqlite3.2.0.3\lib\netstandard2.0\SQLitePCLRaw.provider.e_sqlite3.dll</HintPath>
-    </Reference>
-    <Reference Include="SQLitePCLRaw.batteries_v2">
-      <HintPath>..\packages\SQLitePCLRaw.bundle_green.2.0.3\lib\netstandard2.0\SQLitePCLRaw.batteries_v2.dll</HintPath>
-    </Reference>
-    <Reference Include="SQLite-net">
-      <HintPath>..\packages\sqlite-net-pcl.1.7.335\lib\netstandard2.0\SQLite-net.dll</HintPath>
-    </Reference>
-    <Reference Include="Plugin.CurrentActivity">
-      <HintPath>..\packages\Plugin.CurrentActivity.2.1.0.4\lib\monoandroid44\Plugin.CurrentActivity.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -273,7 +84,6 @@
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
@@ -283,60 +93,88 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\layout\SplashScreen.xml">
-      <SubType></SubType>
-      <Generator></Generator>
+      <SubType>
+      </SubType>
+      <Generator>
+      </Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\values\styles.xml">
-      <SubType></SubType>
-      <Generator></Generator>
+      <SubType>
+      </SubType>
+      <Generator>
+      </Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\DashboardScreen.xml">
-      <SubType></SubType>
-      <Generator></Generator>
+      <SubType>
+      </SubType>
+      <Generator>
+      </Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\values\color.xml">
-      <SubType></SubType>
-      <Generator></Generator>
+      <SubType>
+      </SubType>
+      <Generator>
+      </Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\values\dimention.xml">
-      <SubType></SubType>
-      <Generator></Generator>
+      <SubType>
+      </SubType>
+      <Generator>
+      </Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\BaseView.axml">
-      <SubType></SubType>
-      <Generator></Generator>
+      <SubType>
+      </SubType>
+      <Generator>
+      </Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\PhotoDetailsScreen.xml">
-      <SubType></SubType>
-      <Generator></Generator>
+      <SubType>
+      </SubType>
+      <Generator>
+      </Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\PhotoHolder.xml">
-      <SubType></SubType>
-      <Generator></Generator>
+      <SubType>
+      </SubType>
+      <Generator>
+      </Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable-mdpi\like.png">
-      <SubType></SubType>
-      <Generator></Generator>
+      <SubType>
+      </SubType>
+      <Generator>
+      </Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\like.png">
-      <SubType></SubType>
-      <Generator></Generator>
+      <SubType>
+      </SubType>
+      <Generator>
+      </Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable-hdpi\like.png">
-      <SubType></SubType>
-      <Generator></Generator>
+      <SubType>
+      </SubType>
+      <Generator>
+      </Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable-xhdpi\like.png">
-      <SubType></SubType>
-      <Generator></Generator>
+      <SubType>
+      </SubType>
+      <Generator>
+      </Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable-xxhdpi\like.png">
-      <SubType></SubType>
-      <Generator></Generator>
+      <SubType>
+      </SubType>
+      <Generator>
+      </Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable-xxxhdpi\like.png">
-      <SubType></SubType>
-      <Generator></Generator>
+      <SubType>
+      </SubType>
+      <Generator>
+      </Generator>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
@@ -354,19 +192,33 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\" />
-    <Folder Include="Fragments\" />
-    <Folder Include="Manager\" />
-    <Folder Include="Navigations\" />
-    <Folder Include="Adapters\" />
-    <Folder Include="Holders\" />
-    <Folder Include="Resources\drawable\" />
-    <Folder Include="Resources\drawable-mdpi\" />
-    <Folder Include="Resources\drawable-hdpi\" />
-    <Folder Include="Resources\drawable-xhdpi\" />
-    <Folder Include="Resources\drawable-xxhdpi\" />
-    <Folder Include="Resources\drawable-xxxhdpi\" />
-    <Folder Include="Converters\" />
+    <PackageReference Include="MvvmCross">
+      <Version>7.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.DroidX.Material">
+      <Version>7.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.DroidX.RecyclerView">
+      <Version>7.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.DroidX.SwipeRefreshLayout">
+      <Version>7.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Plugin.Visibility">
+      <Version>7.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Plugin.CurrentActivity">
+      <Version>2.1.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="sqlite-net-pcl">
+      <Version>1.7.335</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Glide">
+      <Version>4.11.0</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.AndroidX.MultiDex.2.0.1.2\build\monoandroid90\Xamarin.AndroidX.MultiDex.targets" Condition="Exists('..\packages\Xamarin.AndroidX.MultiDex.2.0.1.2\build\monoandroid90\Xamarin.AndroidX.MultiDex.targets')" />

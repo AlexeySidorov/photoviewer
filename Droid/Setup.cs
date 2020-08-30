@@ -7,6 +7,8 @@ using MvvmCross.DroidX.RecyclerView;
 using MvvmCross.Platforms.Android.Core;
 using MvvmCross.Plugin;
 using photoviewer.core.Services;
+using photoviewer.Droid.Infrastructure.Services;
+using photoviewer.Droid.Services;
 
 namespace photoviewer.Droid
 {
@@ -32,10 +34,10 @@ namespace photoviewer.Droid
         {
             Mvx.IoCProvider.RegisterType<IMvxBindingContext, MvxBindingContext>();
             Mvx.IoCProvider.RegisterSingleton<IDialogService> (new DialogService());
-            Mvx.IoCProvider.LazyConstructAndRegisterSingleton<IDataBaseService, DataBaseService>();
-            Mvx.IoCProvider.LazyConstructAndRegisterSingleton<IPlatformService, PlatformService>();
-            Mvx.IoCProvider.LazyConstructAndRegisterSingleton<IConnectionService, ConnectionService>();
-            Mvx.IoCProvider.LazyConstructAndRegisterSingleton<IProgressDialogService, ProgressDialogService>();
+            Mvx.IoCProvider.RegisterSingleton<IDataBaseService>(new DataBaseService());
+            Mvx.IoCProvider.RegisterSingleton<IPlatformService> (new PlatformService());
+            Mvx.IoCProvider.RegisterSingleton<IConnectionService> (new ConnectionService());
+            Mvx.IoCProvider.RegisterSingleton<IProgressDialogService> (new ProgressDialogService());
 
             base.InitializeFirstChance();
         }

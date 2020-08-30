@@ -162,7 +162,7 @@ namespace photoviewer.core.DataBaseService
             {
                 using (_lock.Lock())
                 {
-                    var result = Connection.Table<TEntity>().FirstOrDefault(i => i.Id == id);
+                    var result = Connection.Table<TEntity>().FirstOrDefault(i => i.Id.Equals(id));
                     return result;
                 }
             }).ConfigureAwait(false);

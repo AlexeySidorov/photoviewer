@@ -12,8 +12,5 @@
   <ItemGroup>
     <ProjectReference Include="..\photoviewer.core\photoviewer.core.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Dao\" />
-  </ItemGroup>
 </Project>
 

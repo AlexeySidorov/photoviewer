@@ -1,10 +1,17 @@
-﻿using System;
+﻿using photoviewer.core.Data;
+using SQLite;
+
 namespace photoviewer.Domain.Dao
 {
-    public class UserDao
+    public class UserImageUrlDao : IEntity
     {
-        public UserDao()
-        {
-        }
+        [PrimaryKey]
+        public string Id { get; set; }
+
+        public string Small { get; set; }
+
+        public string Medium { get; set; }
+
+        public string Large { get; set; }
     }
 }

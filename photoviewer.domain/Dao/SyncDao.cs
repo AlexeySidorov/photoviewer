@@ -1,13 +1,16 @@
 ﻿using photoviewer.core.Data;
 using SQLite;
 using System;
+
 namespace photoviewer.Domain.Dao
 {
-    public class UserDao : IEntity
+    public class SyncDao : IEntity
     {
         [PrimaryKey]
         public string Id { get; set; }
 
-        public string Name { get; set; }
+        public DateTime FirstSync { get; set; }
+
+        public int Count { get; set; }
     }
 }
