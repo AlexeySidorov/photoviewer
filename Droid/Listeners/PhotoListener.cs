@@ -6,6 +6,6 @@ namespace photoviewer.Droid.Listeners
     {
         void ItemClick(Photo photo);
 
-        void SetLike(string photoId);
+        void SetLike(Photo photo);
     }
 }

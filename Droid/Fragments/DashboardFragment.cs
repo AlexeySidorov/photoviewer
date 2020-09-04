@@ -15,6 +15,7 @@ namespace photoviewer.Droid.Fragments
     public class DashboardFragment : BaseFragment<DashboardViewModel>, IPhotoListener
     {
         private MvxRecyclerView _photos;
+        private PhotoAdapter _adapter;
 
         protected override int FragmentId => Resource.Layout.DashboardScreen;
 
@@ -41,11 +42,11 @@ namespace photoviewer.Droid.Fragments
 
         private void InitData()
         {
-            var adapter = new PhotoAdapter((IMvxAndroidBindingContext)BindingContext);
-            adapter.SetItemClickListener(this);
+            _adapter = new PhotoAdapter((IMvxAndroidBindingContext)BindingContext);
+            _adapter.SetItemClickListener(this);
             _photos.SetLayoutManager(new LinearLayoutManager(Activity));
             _photos.HasFixedSize = true;
-            _photos.SetAdapter(adapter);
+            _photos.SetAdapter(_adapter);
         }
 
         public override void OnResume()
@@ -53,6 +54,18 @@ namespace photoviewer.Droid.Fragments
             base.OnResume();
 
             SetVisibleToolBar(false);
+            ViewModel.UpdateCollectionAction = () =>
+            {
+                if (_adapter != null && _adapter.ItemCount > 0)
+                    _adapter.NotifyDataSetChanged();
+            };
+        }
+
+        public override void OnPause()
+        {
+            base.OnPause();
+
+            ViewModel.UpdateCollectionAction = null;
         }
 
         public void ItemClick(Photo photo)
@@ -60,9 +73,9 @@ namespace photoviewer.Droid.Fragments
             ViewModel?.SelectPhotoCommand.Execute(photo);
         }
 
-        public void SetLike(string photoId)
+        public void SetLike(Photo photo)
         {
-            throw new System.NotImplementedException();
+            ViewModel?.LikeCommand.Execute(photo);
         }
     }
 }

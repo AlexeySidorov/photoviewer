@@ -27,6 +27,8 @@ namespace photoviewer.Services
                 Timeout = new TimeSpan(0, 0, 10),
             };
 
+            httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Client-ID", Settings.AccessKey);
+
             return RestService.For<IRestMetodsRequest>(httpClient, settings);
         }
     }

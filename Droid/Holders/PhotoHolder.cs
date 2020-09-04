@@ -67,7 +67,7 @@ namespace photoviewer.Droid.Holders
             {
                 case Resource.Id.like_block:
                     if (_listener != null)
-                        _listener.SetLike(photo.Id);
+                        _listener.SetLike(photo);
 
                     break;
                 case Resource.Id.image:

@@ -1,7 +1,10 @@
 ﻿
 using FFImageLoading.Transformations;
 using FFImageLoading.Work;
+using MvvmCross.Commands;
 using photoviewer.Domain.models;
+using photoviewer.Services;
+using System;
 using System.Collections.Generic;
 
 namespace photoviewer.ViewModels
@@ -14,6 +17,15 @@ namespace photoviewer.ViewModels
         private string _avatarUrl;
         private string _imageUrl;
         private string _userDescription;
+        private MvxCommand _likeCommand;
+        private readonly IRestApiService _restApiService;
+        private readonly IPhotoService _photoService;
+
+        public PhotoDetailsViewModel(IRestApiService restApiService, IPhotoService photoService)
+        {
+            _restApiService = restApiService;
+            _photoService = photoService;
+        }
 
         #region Binding
 
@@ -79,13 +91,25 @@ namespace photoviewer.ViewModels
 
         public List<ITransformation> Transformations => new List<ITransformation> { new CircleTransformation() };
 
+        public MvxCommand LikeCommand
+        {
+            get
+            {
+                _likeCommand = _likeCommand ?? new MvxCommand(SetLikeAndUnLike);
+                return _likeCommand;
+            }
+        }
+
         #endregion
 
+        private Photo _currentPhoto { get; set; }
         public override void Prepare(Photo parameter)
         {
             base.Prepare(parameter);
 
             if (parameter == null) return;
+
+            _currentPhoto = parameter;
 
             ImageUrl = parameter.Urls == null ? "" : parameter.Urls.Regular;
             AvatarUrl = parameter.User == null || parameter.User.ProfileImages == null ? "" : parameter.User.ProfileImages.Small;
@@ -94,6 +118,33 @@ namespace photoviewer.ViewModels
             Description = string.IsNullOrEmpty(parameter.Description) || string.IsNullOrWhiteSpace(parameter.Description) ?
                 parameter.AltDescription : parameter.Description;
             LikeCount = parameter.Likes.ToString();
+        }
+
+        public async void SetLikeAndUnLike()
+        {
+            if (_currentPhoto == null) return;
+
+            Photo photo = null;
+
+            if (!_currentPhoto.LikedByUser)
+            {
+                var likeResult = await _restApiService.Request().SetLike(_currentPhoto.Id);
+                if (likeResult.Photo != null)
+                    photo = likeResult.Photo;
+            }
+            else
+            {
+                var unLikeResult = await _restApiService.Request().UnLike(_currentPhoto.Id);
+                if (unLikeResult.Photo != null)
+                    photo = unLikeResult.Photo;
+            }
+
+            if (photo == null) return;
+
+            _currentPhoto = photo;
+            Prepare(_currentPhoto);
+
+            await _photoService.UpdatePhotoData(photo);
         }
     }
 }
