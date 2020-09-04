@@ -30,8 +30,10 @@ namespace photoviewer.Droid.Views
             SetupWindowAnimations();
 
             Toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            SetSupportActionBar(Toolbar);
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            SupportActionBar.SetDisplayShowHomeEnabled(true);
         }
-
 
         /// <summary>
         /// WindowAnimations
@@ -59,19 +61,31 @@ namespace photoviewer.Droid.Views
             var fm = SupportFragmentManager;
             // ReSharper disable once SuspiciousTypeConversion.Global
             var backPressedListener = fm.Fragments.OfType<IBackPressedListener>().FirstOrDefault();
-
             if (backPressedListener != null && !backPressedListener.IsBaseBackPressed)
                 backPressedListener.OnBackPressed();
             else if (fm.BackStackEntryCount == 1)
-                Finish();
+                return;
             else
                 base.OnBackPressed();
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Android.Resource.Id.Home:
+                    OnBackPressed();
+                    return true;
+                default:
+                    return base.OnOptionsItemSelected(item);
+            }
         }
 
         /// <summary>
         /// Toolbar base activity
         /// </summary>
         public Toolbar Toolbar { get; set; }
+
         public DrawerLayout DrawerLayout { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
 
         /// <summary>

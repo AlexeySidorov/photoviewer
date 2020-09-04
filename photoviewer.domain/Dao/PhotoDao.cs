@@ -20,6 +20,8 @@ namespace photoviewer.Domain.Dao
 
         public string Description { get; set; }
 
+        public string AltDescription { get; set; }
+
         public string UserId { get; set; }
     }
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using MvvmCross.ViewModels;
-using Newtonsoft.Json;
 
 namespace photoviewer.ViewModels
 {
@@ -8,22 +7,11 @@ namespace photoviewer.ViewModels
     {
     }
 
-    public abstract class ViewModelBase<TInit> : BaseViewModel
+    public class BaseViewModel<TInit> : MvxViewModel<TInit>
     {
-        /// <summary>
-        /// Инициализация модели
-        /// </summary>
-        /// <param name="parameter"></param>
-        public void Init(string parameter)
+        public override void Prepare(TInit parameter)
         {
-            var deserialized = JsonConvert.DeserializeObject<TInit>(parameter);
-            RealInit(deserialized);
+            
         }
-
-        /// <summary>
-        /// Инициализация модели
-        /// </summary>
-        /// <param name="parameter"></param>
-        protected abstract void RealInit(TInit parameter);
     }
 }

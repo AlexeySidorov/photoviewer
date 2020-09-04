@@ -18,7 +18,11 @@ namespace photoviewer.Domain.models
         [JsonProperty("liked_by_user")]
         public bool LikedByUser { get; set; }
 
+        [JsonProperty("description")]
         public string Description { get; set; }
+
+        [JsonProperty("alt_description")]
+        public string AltDescription { get; set; }
 
         public User User { get; set; }
 

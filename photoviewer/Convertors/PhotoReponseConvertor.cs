@@ -14,6 +14,7 @@ namespace photoviewer.Convertors
             photoDao.LikedByUser = photo.LikedByUser;
             photoDao.Likes = photo.Likes;
             photoDao.Description = photo.Description;
+            photoDao.AltDescription = photo.AltDescription;
             photoDao.UserId = photo.User?.Id;
 
             return photoDao;
@@ -26,6 +27,7 @@ namespace photoviewer.Convertors
             var userDao = new UserDao();
             userDao.Id = photo.User.Id;
             userDao.Name = photo.User.Name;
+            userDao.Bio = photo.User.Bio;
 
             return userDao;
         }
@@ -73,12 +75,14 @@ namespace photoviewer.Convertors
             photoData.LikedByUser = photo.LikedByUser;
             photoData.Likes = photo.Likes;
             photoData.Description = photo.Description;
+            photoData.AltDescription = photo.AltDescription;
 
             if (user != null)
             {
                 var userData = new User();
                 userData.Id = user.Id;
                 userData.Name = user.Name;
+                userData.Bio = user.Bio;
 
                 if (imgUrls != null)
                 {

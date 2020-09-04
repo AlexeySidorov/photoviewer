@@ -1,107 +1,127 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿
 <ScrollView
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-	<RelativeLayout
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-		<androidx.appcompat.widget.AppCompatImageView
-			android:id="@+id/image"
-			android:scaleType="centerCrop"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:minWidth="@dimen/photo_img_min_width"
-			android:minHeight="@dimen/photo_img_min_height"
-			android:layout_marginLeft="@dimen/photo_img_margin_left_and_right"
-			android:layout_marginRight="@dimen/photo_img_margin_left_and_right"/>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/image_block"
+            android:layout_width="match_parent"
+            android:minWidth="@dimen/photo_img_min_width"
+            android:layout_height="@dimen/photo_img_min_height"
+            android:layout_marginLeft="@dimen/photo_img_margin_left_and_right"
+            android:layout_marginRight="@dimen/photo_img_margin_left_and_right"
+            app:cardCornerRadius="17dp">
 
-		<androidx.appcompat.widget.AppCompatTextView
-			android:id="@+id/description"
-			android:layout_below="@id/image"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:layout_marginTop="@dimen/description_margin_left_and_right"
-			android:layout_marginLeft="@dimen/description_margin_left_and_right"
-			android:layout_marginRight="@dimen/description_margin_left_and_right"
-			style="@style/DescriptionStyle"/>
+            <FFImageLoading.Cross.MvxCachedImageView
+                android:id="@+id/image"
+                android:adjustViewBounds="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:minWidth="@dimen/photo_img_min_width"
+                app:MvxBind="ImagePath ImageUrl"/>
 
-		<RelativeLayout
-			android:id="@+id/user_block"
-			android:layout_below="@id/description"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content">
+        </com.google.android.material.card.MaterialCardView>
 
-			<Refractored.Controls.CircleImageView
-				android:id="@+id/profile_image"
-				android:layout_width="40dp"
-				android:layout_height="40dp"
-				android:layout_centerVertical="true"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/description"
+            android:layout_below="@id/image_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/description_margin_left_and_right"
+            android:layout_marginLeft="@dimen/description_margin_left_and_right"
+            android:layout_marginRight="@dimen/description_margin_left_and_right"
+            style="@style/DescriptionStyle"
+            app:MvxBind="Text Description"/>
 
-			<RelativeLayout
-				android:layout_toRightOf="@+id/profile_image"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:layout_marginLeft="10dp"
-				android:layout_toEndOf="@id/profile_image"
-				android:layout_centerVertical="true">
+        <RelativeLayout
+            android:id="@+id/user_block"
+            android:layout_below="@id/description"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="@dimen/photo_img_margin_left_and_right"
+            android:layout_marginRight="@dimen/photo_img_margin_left_and_right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-				<androidx.appcompat.widget.AppCompatTextView
-					android:id="@+id/user_name"
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					style="@style/MainTitleStyle"/>
+            <FFImageLoading.Cross.MvxCachedImageView
+                android:id="@+id/profile_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                app:MvxBind="Transformations Transformations; ImagePath AvatarUrl"/>
 
-				<androidx.appcompat.widget.AppCompatTextView
-					android:id="@+id/user_description"
-					android:layout_below="@id/user_name"
-					android:layout_marginTop="1dp"
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					style="@style/SubTitleStyle"/>
+            <RelativeLayout
+                android:layout_toRightOf="@+id/profile_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@id/profile_image"
+                android:layout_centerVertical="true">
 
-			</RelativeLayout>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MainTitleStyle"
+                    app:MvxBind="Text UserName"/>
 
-		</RelativeLayout>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/user_description"
+                    android:layout_below="@id/user_name"
+                    android:layout_marginTop="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/SubTitleStyle"
+                    app:MvxBind="Text UserDescription"/>
 
-		<RelativeLayout
-			android:id="@+id/like_block"
-			android:layout_below="@id/user_block"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:minWidth="@dimen/like_block_min_width"
-			android:minHeight="@dimen/like_block_min_height"
-			android:layout_marginLeft="@dimen/like_block_margin_left_and_right"
-			android:layout_marginRight="@dimen/like_block_margin_left_and_right"
-			android:paddingLeft="@dimen/like_block_padding_left_and_right"
-			android:paddingRight="@dimen/like_block_padding_left_and_right"
-			android:layout_marginTop="@dimen/like_block_margin_top"
-			android:paddingTop="@dimen/like_block_padding_top_and_bottom"
-			android:paddingBottom="@dimen/like_block_padding_top_and_bottom">
+            </RelativeLayout>
 
-			<androidx.appcompat.widget.AppCompatImageView
-				android:id="@+id/like_icon"
-				android:layout_alignParentLeft="true"
-				android:layout_centerVertical="true"
-				android:scaleType="centerCrop"
-				android:src="@drawable/like"
-				android:layout_width="@dimen/like_img_width"
-				android:layout_height="@dimen/like_img_height"/>
+        </RelativeLayout>
 
-			<androidx.appcompat.widget.AppCompatTextView
-				android:id="@+id/like_counter"
-				style="@style/LikeCountStyle"
-				android:layout_toRightOf="@id/like_icon"
-				android:layout_marginLeft="5dp"
-				android:layout_marginStart="5dp"
-				android:layout_centerVertical="true"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"/>
+        <RelativeLayout
+            android:id="@+id/like_block"
+            android:layout_below="@id/user_block"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/like_block_min_width"
+            android:minHeight="@dimen/like_block_min_height"
+            android:layout_marginLeft="@dimen/like_block_margin_left_and_right"
+            android:layout_marginRight="@dimen/like_block_margin_left_and_right"
+            android:paddingLeft="@dimen/like_block_padding_left_and_right"
+            android:paddingRight="@dimen/like_block_padding_left_and_right"
+            android:layout_marginTop="@dimen/like_block_margin_top"
+            android:paddingTop="@dimen/like_block_padding_top_and_bottom"
+            android:paddingBottom="@dimen/like_block_padding_top_and_bottom">
 
-		</RelativeLayout>
-	</RelativeLayout>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/like_icon"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/like"
+                android:layout_width="@dimen/like_img_width"
+                android:layout_height="@dimen/like_img_height"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/like_counter"
+                style="@style/LikeCountStyle"
+                android:layout_toRightOf="@id/like_icon"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:MvxBind="Text LikeCount"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
 
 </ScrollView>

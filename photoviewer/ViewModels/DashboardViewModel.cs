@@ -1,4 +1,5 @@
-﻿
+﻿using MvvmCross.Commands;
+using MvvmCross.Navigation;
 using photoviewer.core.Collections;
 using photoviewer.core.Services;
 using photoviewer.Domain.models;
@@ -9,15 +10,19 @@ namespace photoviewer.ViewModels
 {
     public class DashboardViewModel : BaseViewModel
     {
+        private readonly IMvxNavigationService _navigationService;
         private readonly IConnectionService _connectionService;
         private readonly IDialogService _dialogService;
         private readonly IPhotoService _photoService;
         private readonly IProgressDialogService _progressDialogService;
         private readonly IRestApiService _restApiService;
         private AsyncVirtualizingCollection<Photo> _photos;
+        private MvxCommand<Photo> _selectPhotoCommand;
 
-        public DashboardViewModel(IConnectionService connectionService, IDialogService dialogService, IPhotoService photoService, IProgressDialogService progressDialogService, IRestApiService restApiService)
+        public DashboardViewModel(IMvxNavigationService navigationService, IConnectionService connectionService, IDialogService dialogService, IPhotoService photoService,
+            IProgressDialogService progressDialogService, IRestApiService restApiService)
         {
+            _navigationService = navigationService;
             _connectionService = connectionService;
             _dialogService = dialogService;
             _photoService = photoService;
@@ -37,13 +42,27 @@ namespace photoviewer.ViewModels
             }
         }
 
+        public MvxCommand<Photo> SelectPhotoCommand
+        {
+            get
+            {
+                _selectPhotoCommand = _selectPhotoCommand ?? new MvxCommand<Photo>(SelectPhoto);
+                return _selectPhotoCommand;
+            }
+        }
+
         #endregion
 
-        public override async void ViewAppeared()
+        public override void ViewAppeared()
         {
             base.ViewAppeared();
 
             Photos = new AsyncVirtualizingCollection<Photo>(new PhotoProvider(SortModel.Default), 10);
+        }
+
+        public async void SelectPhoto(Photo photo)
+        {
+            await _navigationService.Navigate<PhotoDetailsViewModel, Photo>(photo);
         }
     }
 }

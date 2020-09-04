@@ -8,6 +8,8 @@ namespace photoviewer.Domain.models
 
         public string Name { get; set; }
 
+        public string Bio { get; set; }
+
         [JsonProperty("profile_image")]
         public ProfileImageModel ProfileImages { get; set; }
     }
