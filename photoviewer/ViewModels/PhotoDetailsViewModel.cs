@@ -122,7 +122,9 @@ namespace photoviewer.ViewModels
 
         public async void SetLikeAndUnLike()
         {
-            if (_currentPhoto == null) return;
+            var isAvailableRequest = await Syncronizer.Syncronizer.Current.IsAvailableRequest();
+            if (!isAvailableRequest)
+                return;
 
             Photo photo = null;
 

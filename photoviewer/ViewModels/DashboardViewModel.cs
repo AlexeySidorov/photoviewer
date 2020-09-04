@@ -82,6 +82,10 @@ namespace photoviewer.ViewModels
         {
             if (photo == null || string.IsNullOrEmpty(photo.Id) || string.IsNullOrWhiteSpace(photo.Id)) return;
 
+            var isAvailableRequest = await Syncronizer.Syncronizer.Current.IsAvailableRequest();
+            if (!isAvailableRequest)
+                return;
+
             Photo tmpPhoto = null;
 
             if (!photo.LikedByUser)
